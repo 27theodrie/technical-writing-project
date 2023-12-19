@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "Fredoka";
+  src: url("/assets/Fredoka.ttf") format("truetype");
+}
+
+body {
+  color: #fff;
+  user-select: none;
+  font-family: "Fredoka", Arial, sans-serif;
+  background: #080a09;
+  margin: 0;
+  padding: 0;
+}
+
+body.loaded .hero {
+  opacity: 1;
+}
+
+header {
+  top: 0;
+  position: fixed;
+  background: #101412;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px 0 8px;
+  display: flex;
+  flex-direction: row;
+  height: 64px;
+  width: calc(100% - 32px);
+}
+
+header img {
+  height: 48px;
+  transition: filter 150ms;
+}
+
+header > a {
+  height: 48px;
+}
+
+header a:hover img,
+header li:hover {
+  filter: brightness(75%);
+}
+
+header ul {
+  list-style: none;
+}
+
+header li {
+  font-size: 18px;
+  display: inline-block;
+  transition: filter 150ms;
+  padding: 4px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+header a {
+  text-decoration: none;
+  color: #288a7a;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 96px;
+  height: 100%;
+  width: 100%;
+}
+
+.hero {
+  transition: opacity 3s
+    linear(
+      0 0%,
+      0 1.8%,
+      0.01 3.6%,
+      0.03 6.35%,
+      0.07 9.1%,
+      0.13 11.4%,
+      0.19 13.4%,
+      0.27 15%,
+      0.34 16.1%,
+      0.54 18.35%,
+      0.66 20.6%,
+      0.72 22.4%,
+      0.77 24.6%,
+      0.81 27.3%,
+      0.85 30.4%,
+      0.88 35.1%,
+      0.92 40.6%,
+      0.94 47.2%,
+      0.96 55%,
+      0.98 64%,
+      0.99 74.4%,
+      1 86.4%,
+      1 100%
+    );
+  opacity: 0;
+  background: url("assets/building-computer.jpg");
+  background-size: cover;
+  background-position: 5% 10%;
+  border-radius: 5%/10%;
+  aspect-ratio: 16/9;
+  text-align: center;
+  justify-content: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 960px;
+  max-width: 90%;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-weight: 600;
+  font-size: 3.377vw;
+  margin: 0;
+  width: 100%;
+}
+
+.hero p {
+  padding: 0 15%;
+  font-size: 2.251vw;
+  text-align: left;
+}
+
+@media (max-width: 566px) {
+  header ul {
+    display: none;
+  }
+}
+
+@media (min-width: 1066px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+  .hero p {
+    font-size: 24px;
+  }
+}
